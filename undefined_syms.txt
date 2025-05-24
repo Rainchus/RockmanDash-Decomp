@@ -1,0 +1,19 @@
+name_20_ROM_START = 0;
+name_20_ROM_END = 0;
+name_20_VRAM = 0;
+name_20_TEXT_START = 0;
+name_20_TEXT_END = 0;
+name_20_DATA_START = 0;
+name_20_RODATA_END = 0;
+name_20_BSS_START = 0;
+name_20_BSS_END = 0;
+
+name_21_ROM_START = 0;
+name_21_ROM_END = 0;
+name_21_VRAM = 0;
+name_21_TEXT_START = 0;
+name_21_TEXT_END = 0;
+name_21_DATA_START = 0;
+name_21_RODATA_END = 0;
+name_21_BSS_START = 0;
+name_21_BSS_END = 0;
