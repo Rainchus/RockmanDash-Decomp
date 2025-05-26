@@ -25,3 +25,4 @@ __pycache__/
 .*.swp
 .venv
 venv/
+tools/gcc_kmc/

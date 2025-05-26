@@ -22,7 +22,7 @@ options:
 
   #o_as_suffix: True
   use_legacy_include_asm: False
-  mips_abi_float_regs: o32
+  mips_abi_float_regs: o32 #something isn't set up correctly for this...unsure what
 
   asm_function_macro: glabel
   asm_jtbl_label_macro: jlabel
@@ -73,7 +73,7 @@ segments:
     subsegments:
       - [0x1060, asm]
       - [0x1500, asm]
-      - [0x1D30, asm]
+      - [0x1D30, c]
       - [0x2950, asm]
       - [0x3FA0, asm]
       - [0x40E0, asm]
@@ -98,7 +98,7 @@ segments:
       - [0x13900, asm]
       - [0x15390, asm]
       - [0x170B0, asm]
-      - [0x171E0, asm]
+      - [0x171E0, c]
       - [0x199F0, asm]
       - [0x22610, asm]
       - [0x23FC0, asm]
@@ -172,7 +172,7 @@ segments:
       - [0x6CFE0, asm]
       - [0x6D920, asm]
       - [0x6D960, asm]
-      - [0x6DA90, asm]
+      - [0x6DA90, c]
       - [0x6DED0, asm]
       - [0x6DF10, asm]
       - [0x6DF50, asm]
@@ -307,12 +307,13 @@ segments:
       - [0x7E510, asm]
       - [0x7E660, asm]
       - [0x7EB00, data, rspBootText]
-      - [0x7EBD0, bin, n_aspMain_code]
+      - [0x7EBD0, data, n_aspMain_code]
       - [0x7F830, data]
       - [0x98A10, .data, overlay_table]
       - [0x99070, data]
       - [0xAC870, data, n_aspMain_data]
       - [0xACB20, data]
+      - [0xAD330, rodata]
 
       - { type: bss, vram: 0x800D37A0 }
 

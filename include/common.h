@@ -10,9 +10,10 @@
 #define FALSE 0
 #define TRUE 1
 
-// #include "ultra64.h"
+#include "ultra64.h"
 #include "types.h"
 #include "include_asm.h"
 #include "ld_addrs.h"
+#include "macros.h"
 
 #endif

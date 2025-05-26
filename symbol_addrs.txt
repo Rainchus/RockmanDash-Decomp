@@ -5,7 +5,14 @@ _ovltbl = 0x800BD610; //rom:0x98A10 size:0x660
 div64_32 = 0x800A3464;
 div64_64 = 0x800A3368;
 
+bzero = 0x80099F70;
+
 //libultra symbols
+
+gFrameBufferPtrs = 0x800A6978; //size:0x08
+gFrameBuffer1 = 0x803B5000;
+gFrameBuffer2 = 0x803DA800;
+
 osSetTime = 0x80092D60;
 osSetIntMask = 0x80094120;
 osCreatePiManager = 0x800941C0;

@@ -65,7 +65,7 @@ LD       := $(CROSS)ld
 OBJCOPY  := $(CROSS)objcopy
 STRIP    := $(CROSS)strip
 
-CC       := tools/gcc_2.7.2/$(DETECTED_OS)/gcc
+CC       := tools/gcc_kmc/$(DETECTED_OS)/2.7.2/gcc
 CC_HOST  := gcc
 CPP      := cpp -P
 
@@ -101,7 +101,7 @@ CFLAGS += -DMOD
 CPPFLAGS += -DMOD
 endif
 
-OPTFLAGS := -O1
+OPTFLAGS := -O2
 
 ### Sources ###
 
@@ -152,7 +152,7 @@ $(BUILD_DIR)/src/%.c.o: src/%.c
 	@$(PRINT)$(GREEN)Compiling C file: $(ENDGREEN)$(BLUE)$<$(ENDBLUE)$(ENDLINE)
 	@mkdir -p $(shell dirname $@)
 	@$(CC_HOST) $(CFLAGS_CHECK) $(CPPFLAGS) -MMD -MP -MT $@ -MF $@.d $<
-	$(V)export COMPILER_PATH=tools/gcc_2.7.2/$(DETECTED_OS) && $(CC) $(OPTFLAGS) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
+	$(V)export COMPILER_PATH=tools/gcc_kmc/$(DETECTED_OS)/2.7.2 && $(CC) $(OPTFLAGS) $(CFLAGS) $(CPPFLAGS) -c -o $@ $<
 	@$(STRIP) $@ -N dummy-symbol-name
 
 # Assemble .s files with modern gnu as
