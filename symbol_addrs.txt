@@ -6,14 +6,26 @@ div64_32 = 0x800A3464;
 div64_64 = 0x800A3368;
 
 bzero = 0x80099F70;
+gDepthBufferPtr = 0x801B5D54;
 
 //libultra symbols
+__osThreadTail = 0x800D0050;
+__osRunQueue = 0x800D0058;
+__osActiveQueue = 0x800D005C;
+__osRunningThread = 0x800D0060;
+__osFaultedThread = 0x800D0064;
+__osTimerList = 0x800D0070;
+__osBaseTimer = 0x8020C3F8;
+__osCurrentTime = 0x801E08E8; //type:u64
+__osBaseCounter = 0x801A28BC; //type:u32
+__osViIntrCount = 0x801B5E08; //type:u32
+__osTimerCounter = 0x8020C8B4; //type:u32
 
+__osDequeueThread = 0x8009B890;
 gFrameBufferPtrs = 0x800A6978; //size:0x08
 gFrameBuffer1 = 0x803B5000;
 gFrameBuffer2 = 0x803DA800;
 
-osSetTime = 0x80092D60;
 osSetIntMask = 0x80094120;
 osCreatePiManager = 0x800941C0;
 osEPiRawStartDma = 0x80094350;
@@ -222,7 +234,6 @@ __udivdi3 = 0x800A36A0;
 __moddi3 = 0x800A35E0;
 __muldi3 = 0x800A3334;
 __umoddi3 = 0x800A36C0;
-__osActiveQueue = 0x800A6A80;
 __additional_scanline = 0x800A6968;
 n_alGlobals = 0x800CF3E0;
 alGlobals = 0x800CF3E4;

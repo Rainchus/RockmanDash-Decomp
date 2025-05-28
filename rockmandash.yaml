@@ -71,7 +71,7 @@ segments:
     follows_vram: entry
     bss_size: 0x1523D0
     subsegments:
-      - [0x1060, asm]
+      - [0x1060, c]
       - [0x1500, asm]
       - [0x1D30, c]
       - [0x2950, asm]
@@ -239,11 +239,11 @@ segments:
       - [0x769E0, asm]
       - [0x76AB0, asm]
       - [0x76BD0, asm]
-      - [0x76C90, asm]
+      - [0x76C90, c, PR/os/thread]
       - [0x76CD0, asm]
       - [0x76D20, asm]
       - [0x76DB0, asm]
-      - [0x76EE0, asm]
+      - [0x76EE0, c, PR/os/timerintr]
       - [0x77200, asm]
       - [0x772C0, asm]
       - [0x77310, asm]
@@ -311,6 +311,9 @@ segments:
       - [0x7F830, data]
       - [0x98A10, .data, overlay_table]
       - [0x99070, data]
+      - [0xAB450, .data, PR/os/thread]
+      - [0xAB470, .data, PR/os/timerintr]
+      - [0xAB480, data]
       - [0xAC870, data, n_aspMain_data]
       - [0xACB20, data]
       - [0xAD330, rodata]
